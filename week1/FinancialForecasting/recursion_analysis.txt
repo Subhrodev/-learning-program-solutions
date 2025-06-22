@@ -1,0 +1,56 @@
+
+Recursion and Its Application
+
+
+1. What is Recursion?
+---------------------
+Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. Each recursive call works on a simpler or smaller version of the original problem until it reaches a base case, which stops further recursion.
+
+Example:
+A classic example is calculating factorial:
+factorial(n) = n * factorial(n - 1)
+Base case: factorial(0) = 1
+
+Benefits:
+- Simplifies problems that have a natural recursive structure (like trees, backtracking, and mathematical sequences).
+- Reduces complex loops and conditionals into concise function calls.
+
+2. Time Complexity of Recursive Growth Algorithm
+------------------------------------------------
+The recursive algorithm to calculate future value with compound growth:
+
+double calculateFutureValue(double value, double rate, int years)
+
+- Each call reduces 'years' by 1.
+- It makes a single call per recursion level.
+
+So the time complexity is:
+- Best Case: O(1) (if years = 0)
+- Worst and Average Case: O(n), where n = number of years
+
+This is a linear time algorithm.
+
+3. Optimization Techniques
+--------------------------
+Recursive solutions can be inefficient if:
+- They recalculate the same subproblems (like in Fibonacci)
+- They go too deep, causing stack overflow
+
+Optimization Methods:
+
+A. Memoization:
+- Store the result of previous calls.
+- Useful in problems with overlapping subproblems.
+
+B. Convert to Iteration:
+- Replace recursion with a loop.
+- Avoids call stack usage and is faster for simple numeric problems.
+
+C. Tail Recursion (in some languages):
+- Optimizes recursive calls by reusing the current stack frame.
+- Java does not support tail-call optimization natively.
+
+Conclusion:
+-----------
+Recursion is powerful and elegant but must be used carefully.
+Always identify base cases clearly and optimize if performance is critical.
