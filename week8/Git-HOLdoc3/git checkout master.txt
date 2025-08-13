@@ -1,0 +1,8 @@
+git checkout master
+git status
+git branch -a
+git pull origin master
+git checkout Git-T03-HOL_002
+git push origin Git-T03-HOL_002
+git fetch origin
+git log origin/Git-T03-HOL_002
